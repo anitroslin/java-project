@@ -1,20 +1,21 @@
-package airplane;
+package airline;
 
 import java.sql.*;  
 
 public class conn{
-    Connection c;
+    public static void main(String[] args)
+    { new conn(); }      
+    
     Statement s;
     public conn(){  
         try{  
+            Connection c;
             Class.forName("com.mysql.jdbc.Driver");  
-            c = DriverManager.getConnection("jdbc:mysql:///project4","root","");    
-            s =c.createStatement(); 
-           
-          
-            
+            c = DriverManager.getConnection("jdbc:mysql:///user","reenu","merryboy");    
+            s =c.createStatement();           
         }catch(Exception e){ 
             System.out.println(e);
         }  
     }  
 }  
+      
